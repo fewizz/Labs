@@ -33,7 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>Lab3.E2V1</StartupObject>
+    <StartupObject>Lab3.E3</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -48,6 +48,7 @@
   <ItemGroup>
     <Compile Include="E1V1.cs" />
     <Compile Include="E2V1.cs" />
+    <Compile Include="E3.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -17,53 +17,53 @@ namespace Lab3
             int[,] mat = new int[matHeight, matWidth];
 
             Console.WriteLine("Enter values for mat elements:");
-            for (int h = 0; h < matHeight; h++)
+            for (int r = 0; r < matHeight; r++)
             {
-                for (int w = 0; w < matWidth; w++)
+                for (int c = 0; c < matWidth; c++)
                 {
-                    Console.Write("{0},{1}: ", h+1, w+1);
-                    mat[h, w] = int.Parse(Console.ReadLine());
+                    Console.Write("{0}, {1}: ", r+1, c+1);
+                    mat[r, c] = int.Parse(Console.ReadLine());
                 }
             }
 
-            int stringsContainingZero = 0;
+            int rowsContainingZero = 0;
 
-            for (int h = 0; h < matHeight; h++)
+            for (int r = 0; r < matHeight; r++)
             {
-                for (int w = 0; w < matWidth; w++)
+                for (int c = 0; c < matWidth; c++)
                 {
-                    if (mat[h, w] == 0)
+                    if (mat[r, c] == 0)
                     {
-                        ++stringsContainingZero;
+                        ++rowsContainingZero;
                         break;
                     }
                 }
             }
 
             Console.WriteLine(
-                "Amount of strings not containing zero: "
-                + (matHeight - stringsContainingZero)
+                "Amount of rows not containing zero: "
+                + (matHeight - rowsContainingZero)
             );
 
             Console.WriteLine("Matrix:");
-            for (int h = 0; h < matHeight; h++)
+            for (int r = 0; r < matHeight; r++)
             {
-                for (int w = 0; w < matWidth; w++)
-                    Console.Write("{0, 4} ", mat[h, w]);
+                for (int c = 0; c < matWidth; c++)
+                    Console.Write("{0, -4} ", mat[r, c]);
                 Console.WriteLine();
             }
 
-            for (int w = 0; w < matWidth; w++) {
-                int old = mat[0, w];
-                mat[0, w] = mat[1, w];
-                mat[1, w] = old;
+            for (int c = 0; c < matWidth; c++) {
+                int old = mat[0, c];
+                mat[0, c] = mat[1, c];
+                mat[1, c] = old;
             }
 
             Console.WriteLine("After 1 and 2 strings swap:");
-            for (int h = 0; h < matHeight; h++)
+            for (int r = 0; r < matHeight; r++)
             {
-                for (int w = 0; w < matWidth; w++)
-                    Console.Write("{0, 4} ", mat[h, w]);
+                for (int c = 0; c < matWidth; c++)
+                    Console.Write("{0, 4} ", mat[r, c]);
                 Console.WriteLine();
             }
 

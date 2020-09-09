@@ -13,11 +13,12 @@ namespace Lab2
             double
                 begin = -8,
                 end = 10,
-                step = 0.25;
+                step = 0.25,
+                x = begin;
 
             Console.WriteLine("|   x   |   y   |");
 
-            for (double x = begin; x <= end; x += step)
+            while (x <= end)
             {
                 double y = double.NaN;
                 if (x >= -8 && x < -5)
@@ -32,6 +33,7 @@ namespace Lab2
                     y = 3;
 
                 Console.WriteLine("|{0,7:F3}|{1,7:F3}|", x, y);
+                x += step;
             }
 
             Console.ReadKey();

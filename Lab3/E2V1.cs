@@ -59,7 +59,7 @@ namespace Lab3
                 mat[1, c] = old;
             }
 
-            Console.WriteLine("After 1 and 2 strings swap:");
+            Console.WriteLine("After 1 and 2 rows swap:");
             for (int r = 0; r < matHeight; r++)
             {
                 for (int c = 0; c < matWidth; c++)

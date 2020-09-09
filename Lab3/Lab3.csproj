@@ -33,7 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>Lab3.E3</StartupObject>
+    <StartupObject>Lab3.E2V1</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />

@@ -22,7 +22,7 @@ namespace Lab3
             int product = 1;
             for (int i = 0; i < arr.Length; i += 2)
                 product *= arr[i];
-            Console.WriteLine("Product of even elements: " + product);
+            Console.WriteLine("Product of elements with even index: " + product);
 
             int firstZeroIndex = -1;
             for (int i = 0; i < arr.Length; i++)

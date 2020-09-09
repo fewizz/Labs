@@ -12,52 +12,50 @@ namespace Lab6
         public static void Main(string[] args)
         {
             string path = "../../E2V1/";
-            string txt = new StreamReader(path+"names.txt").ReadToEnd();
 
-            List<string> persons =
-                txt.Split(
+            string[] persons =
+                new StreamReader(path + "names.txt").ReadToEnd()
+                .Split(
                     new char[] { '\r', '\n' },
                     StringSplitOptions.RemoveEmptyEntries
-                ).ToList();
+                );
+
+            List<string> personsList = persons.ToList();
+
+            while(personsList.Count > 0)
+            {
+                string[] person0 = personsList.First().Split();
+
+                string result = "";
+                int mathces = 0;
+                
+                for (int index = 0; index < personsList.Count;)
+                {
+                    string[] person = personsList[index].Split();
+
+                    if (person0[0].Equals(person[0]))
+                    {
+                        mathces++;
+                        result += person[1] + " " + person[2] + "\n";
+                        personsList.RemoveAt(index);
+                    }
+                    else index++;
+                }
+
+                if (mathces >= 2)
+                    using(StreamWriter sw = new StreamWriter(path + person0[0] + ".txt"))
+                    {
+                        sw.WriteLine(result);
+                    }
+                
+            }
 
             int maxAge = -1;
 
-            foreach (string subs in persons)
-                maxAge = Math.Max(maxAge, int.Parse(subs.Split()[3]));
+            foreach (string person in persons)
+                maxAge = Math.Max(maxAge, int.Parse(person.Split()[3]));
 
-            while(persons.Count > 0)
-            {
-                string secondNameToCheck = persons[0].Split()[0];
-                StreamWriter sw = null;
-
-                for (int x = 1; x < persons.Count;)
-                {
-                    string secondName = persons[x].Split()[0];
-                    if (secondNameToCheck.Equals(secondName))
-                    {
-                        if (sw == null)
-                        {
-                            sw = new StreamWriter(
-                                path + secondName + ".txt",
-                                true
-                            );
-                            sw.WriteLine(persons[0].Split()[0]);
-                        }
-
-                        sw.WriteLine(persons[x]);
-                        persons.RemoveAt(x);
-                    }
-                    else x++;
-                }
-                if(sw != null)
-                {
-                    sw.Flush();
-                    sw.Close();
-                }
-                persons.RemoveAt(0);
-            }
-
-            using (StreamWriter ma = new StreamWriter(path + "max_age.txt"))
+            using (StreamWriter ma = new StreamWriter(path + "maxAge.txt"))
             {
                 ma.WriteLine(maxAge);
             }

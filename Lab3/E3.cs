@@ -18,16 +18,19 @@ namespace Lab3
             arr2[4] = new int[6];
 
             Random rand = new Random();
-            int sum = 0;
             for (int arrIndex = 0; arrIndex < arr2.Length; arrIndex++)
             {
                 for (int i = 0; i < arr2[arrIndex].Length; i++)
                 {
                     int val = rand.Next(-500, 501);
                     arr2[arrIndex][i] = val;
-                    sum += val;
                 }
             }
+
+            int sum = 0;
+            foreach (int[] arr0 in arr2)
+                foreach (int value in arr0)
+                    sum += value;
 
             Console.WriteLine("Sum of all elements: " + sum);
 

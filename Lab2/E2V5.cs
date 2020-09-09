@@ -10,15 +10,17 @@ namespace Lab2
     {
         public static void Main(string[] args)
         {
-            Console.Write("Enter N, from 1(incl.) to 27(excl.): ");
             int N;
 
             while (true)
             {
                 try
                 {
+                    Console.Write("Enter N, from 1(incl.) to 27(excl.): ");
                     N = Convert.ToInt32(Console.ReadLine());
-                    break;
+                    if (N < 1 || N >= 27)
+                        Console.WriteLine("Invalid N.");
+                    else break;
                 } catch(FormatException) {
                     Console.WriteLine("FormatException, try again");
                 }

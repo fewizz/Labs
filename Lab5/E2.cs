@@ -11,7 +11,7 @@ namespace Lab5
         public static void Main(string[] args)
         {
             Console.WriteLine("Enter text: ");
-            String text = Console.ReadLine();
+            string text = Console.ReadLine();
 
             int K = -1;
 

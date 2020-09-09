@@ -13,7 +13,7 @@ namespace Lab6
         {
             char[] vowels = { 'a', 'e', 'i', 'o', 'u', 'y'};
             
-            string str = new StreamReader("../../E1.txt")
+            string str = new StreamReader("../../E1V1/text.txt")
                                             .ReadToEnd()
                                             .Replace('\n', ' ')
                                             .Replace('\r', ' ');

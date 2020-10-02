@@ -41,7 +41,7 @@ namespace Lab5
             {
                 char ch = text[chi];
 
-                bool uppercase = ch >= 'A' && ch <= 'z';
+                bool uppercase = ch >= 'A' && ch <= 'Z';
                 bool lowercase = ch >= 'a' && ch <= 'z';
 
                 int firstChar = -1;

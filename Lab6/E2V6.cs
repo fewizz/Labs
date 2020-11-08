@@ -14,7 +14,7 @@ namespace Lab6
             // Считываем все строки из файла
             string[] lines = File.ReadLines("../../E2V6/books.txt").ToArray();
 
-            // Словарь. Ключ есть Жанр, значением - количество
+            // Словарь. Ключ есть Жанр, значение - количество
             // книг с таким жанром.
             Dictionary<string, uint> genres = new Dictionary<string, uint>();
 
@@ -30,16 +30,17 @@ namespace Lab6
                     // Пока что инициализируем нулем, будет увеличено в след. шаге
                     genres.Add(genre, 0);
 
-                // Увеличиваем количество
+                // Увеличиваем количество.
+                // Получаем количество (обращением к словарю) и увеличиваем его на 1
                 genres[genre]++;
             }
 
             // Записываем
             using(StreamWriter writer = new StreamWriter("../../E2V6/result/by_genres.txt"))
             {
-                // Проходимся по всем жанрам что есть в словаре, и записываем
+                // Проходимся по всем жанрам (ключам словаря) что есть в словаре
                 foreach (string genre in genres.Keys)
-                    // "жанр": "кол-во"
+                    // Записываем "жанр: кол-во"
                     writer.WriteLine(genre + ": " + genres[genre]);
             }
         }

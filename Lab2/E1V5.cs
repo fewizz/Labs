@@ -13,7 +13,7 @@ namespace Lab2
             double
                 begin = -8,
                 end = 10,
-                step = 0.25,
+                step = 1,
                 x = begin;
 
             Console.WriteLine("|   x   |   y   |");

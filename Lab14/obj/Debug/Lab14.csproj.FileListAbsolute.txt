@@ -1,0 +1,6 @@
+E:\Labs\Lab14\bin\Debug\Lab14.exe.config
+E:\Labs\Lab14\bin\Debug\Lab14.exe
+E:\Labs\Lab14\bin\Debug\Lab14.pdb
+E:\Labs\Lab14\obj\Debug\Lab14.csprojResolveAssemblyReference.cache
+E:\Labs\Lab14\obj\Debug\Lab14.exe
+E:\Labs\Lab14\obj\Debug\Lab14.pdb

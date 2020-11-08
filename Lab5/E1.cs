@@ -17,6 +17,12 @@ namespace Lab5
             foreach (string splitted in str.Split())
                 res = splitted + " " + res;
             Console.WriteLine(res);
+
+            res = "";
+            foreach (char ch in str)
+                res = ch + res;
+            Console.WriteLine(res);
+
             Console.ReadKey();
         }
     }

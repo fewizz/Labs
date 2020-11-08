@@ -12,9 +12,10 @@ namespace Lab6
         public static void Main(string[] args)
         {
             string path = "../../E2V1/";
+            string resultPath = path + "result/";
 
             string[] persons =
-                new StreamReader(path + "names.txt").ReadToEnd()
+                new StreamReader(path + "names.txt", Encoding.UTF8).ReadToEnd()
                 .Split(
                     new char[] { '\r', '\n' },
                     StringSplitOptions.RemoveEmptyEntries
@@ -31,19 +32,19 @@ namespace Lab6
                 
                 for (int index = 0; index < personsList.Count;)
                 {
-                    string[] person = personsList[index].Split();
+                    string[] person1 = personsList[index].Split();
 
-                    if (person0[0].Equals(person[0]))
+                    if (person0[0].Equals(person1[0]))
                     {
                         mathces++;
-                        result += person[1] + " " + person[2] + "\n";
+                        result += person1[1] + " " + person1[2] + "\r\n";
                         personsList.RemoveAt(index);
                     }
                     else index++;
                 }
 
                 if (mathces >= 2)
-                    using(StreamWriter sw = new StreamWriter(path + person0[0] + ".txt"))
+                    using(StreamWriter sw = new StreamWriter(resultPath + person0[0] + ".txt"))
                     {
                         sw.WriteLine(result);
                     }
@@ -55,7 +56,7 @@ namespace Lab6
             foreach (string person in persons)
                 maxAge = Math.Max(maxAge, int.Parse(person.Split()[3]));
 
-            using (StreamWriter ma = new StreamWriter(path + "maxAge.txt"))
+            using (StreamWriter ma = new StreamWriter(resultPath + "максимальный_возраст.txt"))
             {
                 ma.WriteLine(maxAge);
             }

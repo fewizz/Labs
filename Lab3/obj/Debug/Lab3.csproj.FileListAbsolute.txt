@@ -1,0 +1,13 @@
+C:\Users\fewizz\Desktop\Labs\Lab3\bin\Debug\Lab3.exe.config
+C:\Users\fewizz\Desktop\Labs\Lab3\bin\Debug\Lab3.exe
+C:\Users\fewizz\Desktop\Labs\Lab3\bin\Debug\Lab3.pdb
+C:\Users\fewizz\Desktop\Labs\Lab3\obj\Debug\Lab3.csprojAssemblyReference.cache
+C:\Users\fewizz\Desktop\Labs\Lab3\obj\Debug\Lab3.csproj.CoreCompileInputs.cache
+C:\Users\fewizz\Desktop\Labs\Lab3\obj\Debug\Lab3.exe
+C:\Users\fewizz\Desktop\Labs\Lab3\obj\Debug\Lab3.pdb
+E:\Labs\Lab3\bin\Debug\Lab3.exe.config
+E:\Labs\Lab3\bin\Debug\Lab3.exe
+E:\Labs\Lab3\bin\Debug\Lab3.pdb
+E:\Labs\Lab3\obj\Debug\Lab3.exe
+E:\Labs\Lab3\obj\Debug\Lab3.pdb
+E:\Labs\Lab3\obj\Debug\Lab3.csprojResolveAssemblyReference.cache

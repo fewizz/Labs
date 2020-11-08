@@ -1,0 +1,5 @@
+E:\Labs\Lab7\bin\Debug\Lab7.exe.config
+E:\Labs\Lab7\bin\Debug\Lab7.exe
+E:\Labs\Lab7\bin\Debug\Lab7.pdb
+E:\Labs\Lab7\obj\Debug\Lab7.exe
+E:\Labs\Lab7\obj\Debug\Lab7.pdb

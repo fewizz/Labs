@@ -41,7 +41,7 @@ namespace Lab3
             }
 
             Console.WriteLine(
-                "Amount of rows not containing zero: "
+                "Rows not containing zero: "
                 + (matHeight - rowsContainingZero)
             );
 
@@ -63,7 +63,7 @@ namespace Lab3
             for (int r = 0; r < matHeight; r++)
             {
                 for (int c = 0; c < matWidth; c++)
-                    Console.Write("{0, 4} ", mat[r, c]);
+                    Console.Write("{0, -4} ", mat[r, c]);
                 Console.WriteLine();
             }
 

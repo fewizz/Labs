@@ -1,0 +1,4 @@
+E:\Labs\Lab8Lib\bin\Debug\Lab8Lib.dll
+E:\Labs\Lab8Lib\bin\Debug\Lab8Lib.pdb
+E:\Labs\Lab8Lib\obj\Debug\Lab8Lib.dll
+E:\Labs\Lab8Lib\obj\Debug\Lab8Lib.pdb

@@ -19,26 +19,23 @@ namespace Lab3
 
             Random rand = new Random();
             for (int arrIndex = 0; arrIndex < arr2.Length; arrIndex++)
-            {
                 for (int i = 0; i < arr2[arrIndex].Length; i++)
-                {
-                    int val = rand.Next(-500, 501);
-                    arr2[arrIndex][i] = val;
-                }
-            }
+                    arr2[arrIndex][i] = rand.Next(-500, 501);
 
-            int sum = 0;
-            foreach (int[] arr0 in arr2)
-                foreach (int value in arr0)
+            for (int row = 0; row < arr2.Length; row++)
+            {
+                int sum = 0;
+                foreach (int value in arr2[row])
                     sum += value;
+                Console.WriteLine("Sum of "+row+"'s row elements:"+sum);
+            }
+            Console.WriteLine();
 
-            Console.WriteLine("Sum of all elements: " + sum);
-
-            Console.WriteLine("Jagged array:");
+            Console.WriteLine("Jagged array's elements:");
             for (int arrIndex = 0; arrIndex < arr2.Length; arrIndex++)
             {
                 for (int i = 0; i < arr2[arrIndex].Length; i++)
-                    Console.Write("{0, -4} ", arr2[arrIndex][i]);
+                    Console.Write("{0, 4} ", arr2[arrIndex][i]);
                 Console.WriteLine();
             }
 

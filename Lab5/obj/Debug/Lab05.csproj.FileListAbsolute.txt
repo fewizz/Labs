@@ -1,0 +1,6 @@
+E:\Labs\Lab5\bin\Debug\Lab5.exe.config
+E:\Labs\Lab5\bin\Debug\Lab5.exe
+E:\Labs\Lab5\bin\Debug\Lab5.pdb
+E:\Labs\Lab5\obj\Debug\Lab05.csprojResolveAssemblyReference.cache
+E:\Labs\Lab5\obj\Debug\Lab5.exe
+E:\Labs\Lab5\obj\Debug\Lab5.pdb

@@ -4,3 +4,9 @@ E:\Labs\Lab9\bin\Debug\Lab9.pdb
 E:\Labs\Lab9\obj\Debug\Lab09.csprojResolveAssemblyReference.cache
 E:\Labs\Lab9\obj\Debug\Lab9.exe
 E:\Labs\Lab9\obj\Debug\Lab9.pdb
+C:\Users\fewizz\Desktop\Labs\Lab9\bin\Debug\Lab9.exe.config
+C:\Users\fewizz\Desktop\Labs\Lab9\bin\Debug\Lab9.exe
+C:\Users\fewizz\Desktop\Labs\Lab9\bin\Debug\Lab9.pdb
+C:\Users\fewizz\Desktop\Labs\Lab9\obj\Debug\Lab09.csproj.CoreCompileInputs.cache
+C:\Users\fewizz\Desktop\Labs\Lab9\obj\Debug\Lab9.exe
+C:\Users\fewizz\Desktop\Labs\Lab9\obj\Debug\Lab9.pdb

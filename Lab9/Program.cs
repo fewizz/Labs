@@ -9,13 +9,13 @@ namespace Lab9
     class Set
     {
         private int[] Elements;
-        public int Count { get{ return Elements.Length; }}
+        public int Count { get { return Elements.Length; } }
 
         public Set()
         {
             Console.Write("Введите размер множества: ");
-            Elements = new int[int.Parse(Console.ReadLine())];
-            Fill();
+            Elements = new int[0];
+            Fill(int.Parse(Console.ReadLine()));
         }
 
         public Set(int[] array)
@@ -23,10 +23,10 @@ namespace Lab9
             Elements = array;
         }
 
-        public void Fill()
+        public void Fill(int count)
         {
-            int count = Count;
-            for(int i = 0; i < count; i++) {
+            for (int i = 0; i < count; i++)
+            {
                 Console.Write("{0}/{1}: ", i + 1, count);
                 Add(int.Parse(Console.ReadLine()));
             }
@@ -44,13 +44,13 @@ namespace Lab9
         {
             string res = "";
             for (int i = 0; i < Count; i++)
-                res+=i+" => "+this[i] + "\n";
+                res += i + " => " + this[i] + "\n";
             return res;
         }
 
         public void Show()
         {
-            Console.WriteLine(this.ToString());
+            Console.WriteLine(ToString());
         }
 
         public void Add(int val)
@@ -62,16 +62,16 @@ namespace Lab9
 
         public void Add(Set s)
         {
-            for (int i = 0; i < s.Count; i++) Add(s[i]);
+            foreach (int elem in s.Elements) Add(elem);
         }
 
-        public static Set operator ++ (Set s)
+        public static Set operator ++(Set s)
         {
             for (int i = 0; i < s.Count; i++) s.Elements[i]++;
             return s;
         }
 
-        public static Set operator + (Set s0, Set s1)
+        public static Set operator +(Set s0, Set s1)
         {
             Set s = new Set(new int[0]);
             s.Add(s0);
@@ -79,34 +79,32 @@ namespace Lab9
             return s;
         }
 
-        public static Set operator * (Set s0, Set s1)
+        public static Set operator *(Set s0, Set s1)
         {
             Set result = new Set(new int[0]);
             Set combined = s0 + s1;
-            for (int i = 0; i < combined.Count; i++)
-            {
-                int elem = combined[i];
-                if (s0.Contains(elem) && s1.Contains(elem) && !result.Contains(elem)) result.Add(elem);
-            }
+            foreach (int elem in combined.Elements)
+                if (s0.Contains(elem) && s1.Contains(elem)) result.Add(elem);
+
             return result;
         }
 
-        public static Set operator / (Set s0, Set s1)
+        public static Set operator /(Set s0, Set s1)
         {
             Set result = new Set(new int[0]);
-            for (int i = 0; i < s0.Count; i++)
-            {
-                int elem = s0[i];
-                if (s0.Contains(elem) && !s1.Contains(elem) && !result.Contains(elem)) result.Add(elem);
-            }
+            foreach (int elem in s0.Elements)
+                if (s0.Contains(elem) && !s1.Contains(elem)) result.Add(elem);
+
             return result;
         }
 
-        public static bool operator < (Set s0, Set s1) { return s0.Count < s1.Count; }
-        public static bool operator > (Set s0, Set s1) { return s0.Count > s1.Count; }
+        public static bool operator <(Set s0, Set s1) { return s0.Count < s1.Count; }
+        public static bool operator >(Set s0, Set s1) { return s0.Count > s1.Count; }
 
-        int this[int index] {
-            get {
+        int this[int index]
+        {
+            get
+            {
                 if (index < 0 || index >= Count) throw new IndexOutOfRangeException();
                 return Elements[index];
             }
@@ -132,10 +130,10 @@ namespace Lab9
             s1.Add(7);
             Console.WriteLine("s1: \n" + s1);
 
-            Console.WriteLine("+: \n" + (s0 + s1));
-            Console.WriteLine("*: \n" + (s0 * s1));
-            Console.WriteLine("/: \n" + (s0 / s1));
-            Console.WriteLine(">: \n" + (s0 > s1));
+            Console.WriteLine("s0 + s1: \n" + (s0 + s1));
+            Console.WriteLine("s0 * s1: \n" + (s0 * s1));
+            Console.WriteLine("s0 / s1: \n" + (s0 / s1));
+            Console.WriteLine("s0 > s1: \n" + (s0 > s1));
 
             Console.ReadKey();
         }
